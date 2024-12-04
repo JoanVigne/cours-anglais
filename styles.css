@@ -1,0 +1,25 @@
+/* styles.css */
+body * {
+  font-family: "Roboto", sans-serif;
+}
+
+#content {
+  text-align: center;
+  margin: 0 auto;
+}
+.line {
+  display: flex;
+  margin: 5px;
+  align-items: center;
+}
+
+#methode h2 {
+  font-size: 55px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+  line-height: normal;
+}
+#methode h2 .line-3 img {
+  width: 100px;
+  height: auto;
+}
