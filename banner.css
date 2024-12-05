@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 80px 20px;
+  margin: 100px 20px;
 }
 #banner .text {
   padding: 10px 30px 10px 80px;
@@ -21,16 +21,16 @@
   position: relative;
 }
 #banner .text h1 .line-3 img {
-  width: 350px;
-  height: 350px;
+  width: 365px;
+  height: 365px;
   z-index: -1;
   position: absolute;
   top: -107px;
-  left: -86px;
+  left: -166px;
 }
 #banner .text p {
   font-size: 1.2em;
-  margin: 35px 50px 10px 0;
+  margin: 35px 50px 20px 0;
   line-height: normal;
   max-width: 775px;
 }

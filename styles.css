@@ -13,13 +13,116 @@ body * {
   align-items: center;
 }
 
+#methode {
+  display: flex;
+  margin: 100px 20px;
+  justify-content: center;
+}
+#methode .container-cards {
+  display: flex;
+}
+#methode .container-cards .card {
+  width: 300px;
+  margin: 15px;
+}
+#methode .container-cards .card img {
+  border-radius: 30px;
+  height: 240px;
+  width: 300px;
+  object-fit: cover;
+}
+#methode .container-cards .card .txt {
+  margin-top: 8px;
+  min-height: 100px;
+  border-radius: 30px;
+  padding: 15px 20px;
+  position: relative;
+}
+#methode .container-cards .card-one .txt {
+  background-color: #ffdeac;
+}
+#methode .container-cards .card-two .txt {
+  background-color: #c2deb9;
+}
+
+#methode .container-cards .card .txt h3 {
+  padding-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+}
+#methode .container-cards .card .txt img {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 7px;
+  right: 20px;
+}
+#methode .container-cards .card .txt p {
+}
+
 #methode h2 {
-  font-size: 55px;
+  margin: 40px 22px;
+  font-size: 59px;
   font-weight: 800;
-  letter-spacing: 1.1px;
+  letter-spacing: 1.7px;
   line-height: normal;
 }
 #methode h2 .line-3 img {
   width: 100px;
   height: auto;
+}
+
+#methode h2 .line-1 img {
+  width: 120px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 50px;
+  margin-left: 10px;
+}
+
+/* TESTIMONIALS */
+#testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#testimonial .card-1,
+#testimonial .card-2 {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+#testimonial .card-1 p,
+#testimonial .card-2 p {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#testimonial .author {
+  display: flex;
+  align-items: center;
+}
+
+#testimonial .author img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#testimonial .author p {
+  font-size: 1em;
+  color: #666;
 }

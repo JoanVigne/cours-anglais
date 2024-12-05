@@ -5,8 +5,15 @@ const translations = {
     titleThree: "With Joan",
     description:
       "Learn English with a professional teacher. Improve your skills in speaking, writing, and comprehension.",
-    button: "Learn More",
+    button: "Get started",
     sticker1: "Online and presential classes",
+    methodCardTitle1: "I Adapt!",
+    methodCardPara1:
+      "Through our initial lessons together, I create personalized and unique lessons.",
+    methodCardTitle2: "For Everyone!",
+    methodCardPara2:
+      "Beginner, intermediate, or advanced, I have everything you need.",
+
     methodTitle1: "Why",
     methodTitle2: "Choose My",
     methodTitle3: "Method",
@@ -22,6 +29,7 @@ const translations = {
       pricing: "Pricing",
       testimonial: "Testimonial",
       contact: "Contact",
+      button: "Get started",
     },
     testimonials: [
       {
@@ -42,8 +50,14 @@ const translations = {
     titleThree: "Avec Joan",
     description:
       "Apprenez l'anglais avec un professeur professionnel. Améliorez vos compétences en expression orale, écrite et en compréhension.",
-    button: "En savoir plus",
+    button: "Se lancer",
     sticker1: "Cours en ligne et en présentiel",
+    methodCardTitle1: "Je m'adapte!",
+    methodCardPara1:
+      "Grâce aux premiers cours ensemble, j'apprend à vous connaitre et je construis des cours personnalisés et uniques.",
+    methodCardTitle2: "Pour tous le monde!",
+    methodCardPara2:
+      "Débutant, intermédiaire ou avancé, j'ai tout ce qu'il faut pour vous.",
     methodTitle1: "Pourquoi",
     methodTitle2: "Choisir Ma",
     methodTitle3: "Méthode",
@@ -59,6 +73,7 @@ const translations = {
       pricing: "Tarification",
       testimonial: "Témoignage",
       contact: "Contact",
+      button: "Commencer",
     },
     testimonials: [
       {
@@ -88,7 +103,7 @@ function setLanguageContent() {
     lang.header.testimonial;
   document.querySelector("nav ul li:nth-child(4) a").textContent =
     lang.header.contact;
-
+  document.querySelector("header button").textContent = lang.header.button;
   // Update banner
   document.querySelector("#banner .text h1 .line-1 .txt").textContent =
     lang.titleOne;
@@ -100,7 +115,21 @@ function setLanguageContent() {
   document.querySelector("#banner .text button").textContent = lang.button;
   document.querySelector("#banner .sticker1").textContent = lang.sticker1;
 
-  // Update method section
+  //! METHOD section
+  // CARD
+  document.querySelector(
+    "#methode .container-cards .card-one .txt h3"
+  ).textContent = lang.methodCardTitle1;
+  document.querySelector(
+    "#methode .container-cards .card-one .txt p"
+  ).textContent = lang.methodCardPara1;
+  document.querySelector(
+    "#methode .container-cards .card-two .txt h3"
+  ).textContent = lang.methodCardTitle2;
+  document.querySelector(
+    "#methode .container-cards .card-two .txt p"
+  ).textContent = lang.methodCardPara2;
+  // TITLE
   document.querySelector("#methode h2 .line-1 .txt").textContent =
     lang.methodTitle1;
   document.querySelector("#methode h2 .line-2 .txt").textContent =
