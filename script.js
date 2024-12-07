@@ -19,7 +19,6 @@ const translations = {
     methodTitle3: "Method",
     methodDescription:
       "We use a unique approach to teaching English that focuses on practical usage and real-world scenarios.",
-    testimonialTitle: "Testimonial",
     contactTitle: "Contact",
     contactDescription: "Get in touch with us for more information.",
     pricingTitle: "Pricing",
@@ -35,12 +34,12 @@ const translations = {
       {
         text: "These classes have greatly improved my English skills. Highly recommended!",
         author: "John Doe",
-        authorImage: "john.jpg",
+        authorImage: "/assets/john.jpg",
       },
       {
         text: "I love the interactive sessions and the practical approach to learning.",
         author: "Jane Smith",
-        authorImage: "jane.jpg",
+        authorImage: "/assets/jane.jpg",
       },
     ],
   },
@@ -63,7 +62,6 @@ const translations = {
     methodTitle3: "Méthode",
     methodDescription:
       "Nous utilisons une approche unique pour enseigner l'anglais, axée sur l'utilisation pratique et les scénarios réels.",
-    testimonialTitle: "Témoignage",
     contactTitle: "Contact",
     contactDescription: "Contactez-nous pour plus d'informations.",
     pricingTitle: "Tarification",
@@ -79,12 +77,12 @@ const translations = {
       {
         text: "Ces cours ont grandement amélioré mes compétences en anglais. Hautement recommandé!",
         author: "Jean Dupont",
-        authorImage: "jean.jpg",
+        authorImage: "/assets/jean.jpg",
       },
       {
         text: "J'adore les sessions interactives et l'approche pratique de l'apprentissage.",
         author: "Marie Curie",
-        authorImage: "marie.jpg",
+        authorImage: "/assets/marie.jpg",
       },
     ],
   },
@@ -138,18 +136,18 @@ function setLanguageContent() {
     lang.methodTitle3;
 
   // Update testimonial section
-  document.querySelector("#testimonial h2").textContent = lang.testimonialTitle;
   const testimonialSection = document.querySelector("#testimonial");
   testimonialSection.innerHTML = ""; // Clear existing testimonials
   lang.testimonials.forEach((testimonial, index) => {
     const testimonialCard = document.createElement("div");
     testimonialCard.className = `card-${index + 1}`;
     testimonialCard.innerHTML = `
-        <p>${testimonial.text}</p>
-        <div class="author">
+     <div class="author">
           <img src="${testimonial.authorImage}" alt="${testimonial.author}">
           <p>${testimonial.author}</p>
         </div>
+        <p>${testimonial.text}</p>
+       
       `;
     testimonialSection.appendChild(testimonialCard);
   });
