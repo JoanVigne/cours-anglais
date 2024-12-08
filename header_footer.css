@@ -38,3 +38,16 @@ header button:hover {
   background-color: #f6922a;
   border: 1px black solid;
 }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  color: #666;
+}
+
+footer img {
+  width: 50px;
+}

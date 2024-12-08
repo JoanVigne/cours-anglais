@@ -42,6 +42,10 @@ const translations = {
         authorImage: "/assets/jane.jpg",
       },
     ],
+    pricing: {},
+    footer: {
+      text: "© 2021 English Classes. All rights reserved.",
+    },
   },
   fr: {
     titleOne: "Bienvenue aux ",
@@ -85,6 +89,10 @@ const translations = {
         authorImage: "/assets/marie.jpg",
       },
     ],
+    pricing: {},
+    footer: {
+      text: "© 2021 Cours d'anglais. Tous droits réservés.",
+    },
   },
 };
 
@@ -151,14 +159,27 @@ function setLanguageContent() {
       `;
     testimonialSection.appendChild(testimonialCard);
   });
-
-  // Update contact section
+  /*
+  //contact section
   document.querySelector("#contact h2").textContent = lang.contactTitle;
   document.querySelector("#contact p").textContent = lang.contactDescription;
 
-  // Update pricing section
+  //  pricing section
+
   document.querySelector("#pricing h2").textContent = lang.pricingTitle;
   document.querySelector("#pricing p").textContent = lang.pricingDescription;
+ */
+  // footer
+  document.querySelector("footer p").textContent = lang.footer.text;
+  // Update header
+  document.querySelector("footer nav ul li:nth-child(1) a").textContent =
+    lang.header.about;
+  document.querySelector("footer av ul li:nth-child(2) a").textContent =
+    lang.header.pricing;
+  document.querySelector("footer nav ul li:nth-child(3) a").textContent =
+    lang.header.testimonial;
+  document.querySelector("footer nav ul li:nth-child(4) a").textContent =
+    lang.header.contact;
 }
 
 setLanguageContent();

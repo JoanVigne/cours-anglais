@@ -7,11 +7,12 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="assets/study.png" type="image/x-icon" />
     <title>English Teacher</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="banner.css" />
-    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="header_footer.css" />
   </head>
   <body>
     <header>
@@ -94,17 +95,54 @@
         </h2>
       </section>
       <section id="testimonial"></section>
-      <section id="contact">
-        <h2></h2>
-        <p></p>
-      </section>
       <section id="pricing">
         <h2></h2>
         <p></p>
       </section>
+      <section id="contact">
+        <form method="POST" id="form">
+          <input
+            type="hidden"
+            name="access_key"
+            value="6fa5d972-f9ff-430a-a050-3542863c82ce"
+          />
+
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <input
+            type="checkbox"
+            name="botcheck"
+            class="hidden"
+            style="display: none"
+          />
+
+          <button type="submit">Send</button>
+
+          <div id="result"></div>
+        </form>
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="logo"><img src="assets/study.png" alt="" /></div>
+      <p></p>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#testimonial">Testimonial</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </footer>
     <script src="translation.js"></script>
     <script src="script.js"></script>
+    <script src="contactform.js"></script>
   </body>
 </html>
