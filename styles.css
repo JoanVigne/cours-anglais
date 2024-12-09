@@ -127,15 +127,18 @@ body * {
 }
 
 /* CONTACT */
-#contact {
-  background-color: #f9f9f9;
+#contact h2 {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
 }
 form {
   display: flex;
   flex-direction: column;
   gap: 10px;
   max-width: 400px;
-  margin: 0 auto;
+  margin: 50px auto;
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 10px;

@@ -25,11 +25,11 @@ const translations = {
     pricingDescription: "Check out our competitive pricing plans.",
     header: {
       about: "About",
-      pricing: "Pricing",
+      /*       pricing: "Pricing", */
       testimonial: "Testimonial",
       contact: "Contact",
-      button: "Get started",
     },
+    buttonheader: "Get started",
     testimonials: [
       {
         text: "These classes have greatly improved my English skills. Highly recommended!",
@@ -72,11 +72,11 @@ const translations = {
     pricingDescription: "Découvrez nos plans tarifaires compétitifs.",
     header: {
       about: "À propos",
-      pricing: "Tarification",
+      /*       pricing: "Tarification", */
       testimonial: "Témoignage",
       contact: "Contact",
-      button: "Commencer",
     },
+    buttonheader: "Commencer",
     testimonials: [
       {
         text: "Ces cours ont grandement amélioré mes compétences en anglais. Hautement recommandé!",
@@ -101,15 +101,19 @@ function setLanguageContent() {
   const lang = translations[userLang];
 
   // Update header
-  document.querySelector("nav ul li:nth-child(1) a").textContent =
-    lang.header.about;
-  document.querySelector("nav ul li:nth-child(2) a").textContent =
-    lang.header.pricing;
-  document.querySelector("nav ul li:nth-child(3) a").textContent =
-    lang.header.testimonial;
-  document.querySelector("nav ul li:nth-child(4) a").textContent =
-    lang.header.contact;
-  document.querySelector("header button").textContent = lang.header.button;
+  const navUl = document.querySelector("header nav ul");
+  navUl.innerHTML = ""; // Clear existing items
+
+  Object.keys(lang.header).forEach((key) => {
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.textContent = lang.header[key];
+    a.href = `#${key}`;
+    li.appendChild(a);
+    navUl.appendChild(li);
+  });
+
+  document.querySelector("header button").textContent = lang.buttonheader;
   // Update banner
   document.querySelector("#banner .text h1 .line-1 .txt").textContent =
     lang.titleOne;
@@ -171,15 +175,27 @@ function setLanguageContent() {
  */
   // footer
   document.querySelector("footer p").textContent = lang.footer.text;
-  // Update header
-  document.querySelector("footer nav ul li:nth-child(1) a").textContent =
-    lang.header.about;
-  document.querySelector("footer av ul li:nth-child(2) a").textContent =
-    lang.header.pricing;
-  document.querySelector("footer nav ul li:nth-child(3) a").textContent =
-    lang.header.testimonial;
-  document.querySelector("footer nav ul li:nth-child(4) a").textContent =
-    lang.header.contact;
+  // Update footer
+  const footerNav = document.querySelector("footer nav ul");
+  Object.keys(lang.header).forEach((key, index) => {
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    const logo = document.createElement("img");
+    logo.src = "/assets/arrow-haut-droite-50.png";
+    const numb = document.createElement("span");
+    numb.setAttribute("class", "numb");
+    numb.textContent = "0" + [index + 1];
+    a.appendChild(numb);
+    let aContent = document.createElement("span");
+    aContent.setAttribute("class", "aContent");
+    aContent.textContent = lang.header[key];
+    a.appendChild(aContent);
+    a.href = `#${key}`;
+
+    li.appendChild(a);
+    li.appendChild(logo);
+    footerNav.appendChild(li);
+  });
 }
 
 setLanguageContent();

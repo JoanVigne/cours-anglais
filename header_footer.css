@@ -41,13 +41,44 @@ header button:hover {
 
 footer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
+  align-items: baseline;
   padding: 10px 20px;
   background-color: #f9f9f9;
   color: #666;
 }
+footer nav {
+  margin: 5px 0 40px;
+}
+footer nav ul li {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 20px;
+  padding: 20px 0 10px;
+  border-bottom: 1px black solid;
+  min-width: 350px;
+  font-size: 30px;
+}
+footer nav ul li img {
+  opacity: 0;
+  width: 40px;
+}
+footer nav ul li:hover img {
+  opacity: 1;
+}
+footer nav ul li:hover .aContent {
+  font-weight: 600;
+  color: black;
+}
+footer nav ul li a {
+  text-decoration: none;
+  color: rgb(67, 66, 66);
+}
 
-footer img {
+footer nav ul li a .numb {
+  font-size: 25px;
+  margin-right: 35px;
+}
+footer .logo img {
   width: 50px;
 }
