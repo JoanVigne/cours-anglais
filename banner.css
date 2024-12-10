@@ -34,7 +34,9 @@
   line-height: normal;
   max-width: 775px;
 }
-#banner .text button {
+
+#banner .text .button {
+  text-decoration: none;
   background-color: #f6922a;
   font-size: 20px;
   font-weight: 200;
@@ -46,12 +48,12 @@
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-#banner .text button:hover {
+#banner .text .button:hover {
   background-color: #ff6347; /* Couleur orangée plus foncée au survol */
   transform: scale(1.05); /* Légère augmentation de la taille au survol */
 }
 
-#banner .text button:active {
+#banner .text .button:active {
   background-color: #ff4500; /* Couleur orangée encore plus foncée lors du clic */
   transform: scale(0.95); /* Légère réduction de la taille lors du clic */
 }

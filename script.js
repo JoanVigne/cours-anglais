@@ -44,7 +44,9 @@ const translations = {
     ],
     pricing: {},
     footer: {
-      text: "© 2021 English Classes. All rights reserved.",
+      title: "English Classes",
+      text: "Learning with personalized topics and classes tailored to each student.",
+      droit: "© 2021 English Classes. All rights reserved.",
     },
   },
   fr: {
@@ -91,7 +93,9 @@ const translations = {
     ],
     pricing: {},
     footer: {
-      text: "© 2021 Cours d'anglais. Tous droits réservés.",
+      title: "Cours d'anglais",
+      text: "Apprendre avec des sujets personnalisés et des cours adaptés à chaque élève.",
+      droit: "© 2021 Cours d'anglais. Tous droits réservés.",
     },
   },
 };
@@ -112,8 +116,8 @@ function setLanguageContent() {
     li.appendChild(a);
     navUl.appendChild(li);
   });
+  document.querySelector("header .button").textContent = lang.buttonheader;
 
-  document.querySelector("header button").textContent = lang.buttonheader;
   // Update banner
   document.querySelector("#banner .text h1 .line-1 .txt").textContent =
     lang.titleOne;
@@ -122,7 +126,7 @@ function setLanguageContent() {
   document.querySelector("#banner .text h1 .line-3 .txt").textContent =
     lang.titleThree;
   document.querySelector("#banner .text p").textContent = lang.description;
-  document.querySelector("#banner .text button").textContent = lang.button;
+  document.querySelector("#banner .text .button").textContent = lang.button;
   document.querySelector("#banner .sticker1").textContent = lang.sticker1;
 
   //! METHOD section
@@ -174,8 +178,10 @@ function setLanguageContent() {
   document.querySelector("#pricing p").textContent = lang.pricingDescription;
  */
   // footer
-  document.querySelector("footer p").textContent = lang.footer.text;
-  // Update footer
+  document.querySelector("footer .logo h2").textContent = lang.footer.title;
+  document.querySelector("footer .logo p").textContent = lang.footer.text;
+  document.querySelector("footer .logo small").textContent = lang.footer.droit;
+  // nav
   const footerNav = document.querySelector("footer nav ul");
   Object.keys(lang.header).forEach((key, index) => {
     const li = document.createElement("li");

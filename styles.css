@@ -1,4 +1,6 @@
-/* styles.css */
+html {
+  scroll-behavior: smooth;
+}
 body * {
   font-family: "Roboto", sans-serif;
 }
@@ -15,7 +17,7 @@ body * {
 
 #methode {
   display: flex;
-  margin: 100px 20px;
+  margin: 150px 20px;
   justify-content: center;
 }
 #methode .container-cards {
@@ -85,7 +87,7 @@ body * {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 20px;
+  padding: 80px 20px;
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -127,8 +129,10 @@ body * {
 }
 
 /* CONTACT */
+#contact {
+  margin: 100px 20px;
+}
 #contact h2 {
-  margin-top: 40px;
   text-align: center;
   font-size: 40px;
   font-weight: 800;
@@ -138,7 +142,7 @@ form {
   flex-direction: column;
   gap: 10px;
   max-width: 400px;
-  margin: 50px auto;
+  margin: 30px auto;
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 10px;
