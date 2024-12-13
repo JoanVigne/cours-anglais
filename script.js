@@ -1,107 +1,11 @@
-const translations = {
-  en: {
-    titleOne: "Welcome to ",
-    titleTwo: "English Classes",
-    titleThree: "With Joan",
-    description:
-      "Learn English with a professional teacher. Improve your skills in speaking, writing, and comprehension.",
-    button: "Get started",
-    sticker1: "Online and presential classes",
-    methodCardTitle1: "I Adapt!",
-    methodCardPara1:
-      "Through our initial lessons together, I create personalized and unique lessons.",
-    methodCardTitle2: "For Everyone!",
-    methodCardPara2:
-      "Beginner, intermediate, or advanced, I have everything you need.",
-
-    methodTitle1: "Why",
-    methodTitle2: "Choose My",
-    methodTitle3: "Method",
-    methodDescription:
-      "We use a unique approach to teaching English that focuses on practical usage and real-world scenarios.",
-    contactTitle: "Contact",
-    contactDescription: "Get in touch with us for more information.",
-    pricingTitle: "Pricing",
-    pricingDescription: "Check out our competitive pricing plans.",
-    header: {
-      about: "About",
-      /*       pricing: "Pricing", */
-      testimonial: "Testimonial",
-      contact: "Contact",
-    },
-    buttonheader: "Get started",
-    testimonials: [
-      {
-        text: "These classes have greatly improved my English skills. Highly recommended!",
-        author: "John Doe",
-        authorImage: "/assets/john.jpg",
-      },
-      {
-        text: "I love the interactive sessions and the practical approach to learning.",
-        author: "Jane Smith",
-        authorImage: "/assets/jane.jpg",
-      },
-    ],
-    pricing: {},
-    footer: {
-      title: "English Classes",
-      text: "Learning with personalized topics and classes tailored to each student.",
-      droit: "© 2021 English Classes. All rights reserved.",
-    },
-  },
-  fr: {
-    titleOne: "Bienvenue aux ",
-    titleTwo: "Cours d'anglais",
-    titleThree: "Avec Joan",
-    description:
-      "Apprenez l'anglais avec un professeur professionnel. Améliorez vos compétences en expression orale, écrite et en compréhension.",
-    button: "Se lancer",
-    sticker1: "Cours en ligne et en présentiel",
-    methodCardTitle1: "Je m'adapte!",
-    methodCardPara1:
-      "Grâce aux premiers cours ensemble, j'apprend à vous connaitre et je construis des cours personnalisés et uniques.",
-    methodCardTitle2: "Pour tous le monde!",
-    methodCardPara2:
-      "Débutant, intermédiaire ou avancé, j'ai tout ce qu'il faut pour vous.",
-    methodTitle1: "Pourquoi",
-    methodTitle2: "Choisir Ma",
-    methodTitle3: "Méthode",
-    methodDescription:
-      "Nous utilisons une approche unique pour enseigner l'anglais, axée sur l'utilisation pratique et les scénarios réels.",
-    contactTitle: "Contact",
-    contactDescription: "Contactez-nous pour plus d'informations.",
-    pricingTitle: "Tarification",
-    pricingDescription: "Découvrez nos plans tarifaires compétitifs.",
-    header: {
-      about: "À propos",
-      /*       pricing: "Tarification", */
-      testimonial: "Témoignage",
-      contact: "Contact",
-    },
-    buttonheader: "Commencer",
-    testimonials: [
-      {
-        text: "Ces cours ont grandement amélioré mes compétences en anglais. Hautement recommandé!",
-        author: "Jean Dupont",
-        authorImage: "/assets/jean.jpg",
-      },
-      {
-        text: "J'adore les sessions interactives et l'approche pratique de l'apprentissage.",
-        author: "Marie Curie",
-        authorImage: "/assets/marie.jpg",
-      },
-    ],
-    pricing: {},
-    footer: {
-      title: "Cours d'anglais",
-      text: "Apprendre avec des sujets personnalisés et des cours adaptés à chaque élève.",
-      droit: "© 2021 Cours d'anglais. Tous droits réservés.",
-    },
-  },
-};
-
 function setLanguageContent() {
-  const userLang = navigator.language.startsWith("fr") ? "fr" : "en";
+  userLang = navigator.language.startsWith("fr")
+    ? "fr"
+    : navigator.language.startsWith("pt")
+    ? "pt"
+    : navigator.language.startsWith("it")
+    ? "it"
+    : "en";
   const lang = translations[userLang];
 
   // Update header

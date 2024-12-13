@@ -38,11 +38,12 @@ header .button {
 }
 header .button:hover {
   background-color: #f6922a;
-  border: 2px black solid;
+  transform: scale(1.05);
 }
+
 header .button:active {
-  background-color: #ff4500; /* Couleur orangée encore plus foncée lors du clic */
-  transform: scale(0.95); /* Légère réduction de la taille lors du clic */
+  background-color: #ff6347;
+  transform: scale(0.95);
 }
 footer {
   display: flex;
@@ -100,4 +101,44 @@ footer nav ul li a {
 footer nav ul li a .numb {
   font-size: 25px;
   margin-right: 35px;
+}
+
+@media (max-width: 780px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  header .logo img {
+    display: none;
+  }
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 35px;
+  }
+
+  header nav ul li {
+    margin-bottom: 10px;
+  }
+  header nav ul li a {
+    font-size: 28px;
+  }
+  header .button {
+    display: none;
+  }
+
+  footer {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    height: auto;
+  }
+  footer * {
+    text-align: center;
+  }
+  footer .logo {
+    margin-bottom: 10px;
+    align-items: center;
+  }
 }

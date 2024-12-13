@@ -36,6 +36,7 @@
 }
 
 #banner .text .button {
+  display: inline-block;
   text-decoration: none;
   background-color: #f6922a;
   font-size: 20px;
@@ -49,13 +50,13 @@
 }
 
 #banner .text .button:hover {
-  background-color: #ff6347; /* Couleur orangée plus foncée au survol */
-  transform: scale(1.05); /* Légère augmentation de la taille au survol */
+  background-color: #ff6347;
+  transform: scale(1.05);
 }
 
 #banner .text .button:active {
-  background-color: #ff4500; /* Couleur orangée encore plus foncée lors du clic */
-  transform: scale(0.95); /* Légère réduction de la taille lors du clic */
+  background-color: #ff4500;
+  transform: scale(0.95);
 }
 #banner .container-photo {
   position: relative;
@@ -89,4 +90,47 @@
   background-color: #c2deb9;
   border-radius: 14px;
   padding: 13px 20px;
+}
+
+@media (max-width: 780px) {
+  #banner {
+    flex-direction: column;
+  }
+
+  #banner .text {
+    padding: 0;
+    text-align: center;
+  }
+
+  #banner .text h1 {
+    font-size: 40px;
+    padding-left: 0;
+    align-items: center;
+  }
+  #banner .text h1 .line-1 img {
+    display: none;
+  }
+  #banner .text h1 .line-3 img {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    left: -50px;
+  }
+
+  #banner .text p {
+    font-size: 21px;
+    margin: 40px 0;
+  }
+
+  #banner .container-photo {
+    margin-top: 20px;
+  }
+  #banner .container-photo .about-image {
+    max-height: 250px;
+  }
+  #banner .container-photo img {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+  }
 }
