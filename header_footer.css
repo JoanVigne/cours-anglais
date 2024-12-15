@@ -133,6 +133,7 @@ footer nav ul li a .numb {
     align-items: center;
     text-align: center;
     height: auto;
+    padding: 0;
   }
   footer * {
     text-align: center;

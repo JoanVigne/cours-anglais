@@ -195,17 +195,30 @@ form button:active {
 }
 @media (max-width: 780px) {
   #methode {
-    margin: 60px 20px;
+    margin: 0;
     flex-direction: column-reverse;
+  }
+  #methode h2 {
+    font-size: 40px;
   }
   #methode h2 img {
     display: none;
   }
   #methode .container-cards {
     flex-direction: column;
+    align-items: center;
+  }
+  #testimonial {
+    padding: 0;
   }
   #testimonial .card-1,
   #testimonial .card-2 {
-    max-width: 90%;
+    max-width: 290px;
+  }
+  #contact {
+    margin: 100px 0;
+  }
+  #contact form {
+    max-width: 80%;
   }
 }

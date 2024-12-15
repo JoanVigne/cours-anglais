@@ -127,6 +127,7 @@
   }
   #banner .container-photo .about-image {
     max-height: 250px;
+    padding: 10px;
   }
   #banner .container-photo img {
     max-width: 100%;
